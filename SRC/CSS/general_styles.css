@@ -1,7 +1,42 @@
 html, body {
-    background-color: #e0e7e5;
+    background-color: #F2F4EF;
     }
+
+    margin
 
     h1 {
         color: #379EA8;
         }
+
+    p {
+        color: #000000;
+        
+    }
+
+.brand {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        background-color: #379EA8; /* new line – just copy and paste this line */
+        padding: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        }
+
+.page-links {
+        grid-column: 3 / span 2;
+        grid-row: 1;
+        text-align: right;
+        background-color: #379EA8; /* new line – just copy and paste this line */
+        padding: 10px;
+        }
+
+.menu-button {
+            font-size: 20px;
+            color: white;
+            background-color: #379EA8;
+            padding: 2px 20px;
+            border-style: solid;
+            border-radius: 5px;
+            border-color: white;
+            }
