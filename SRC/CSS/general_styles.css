@@ -1,5 +1,7 @@
 html, body {
     background-color: #F2F4EF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     }
 
     margin
@@ -40,3 +42,7 @@ html, body {
             border-radius: 5px;
             border-color: white;
             }
+.main {
+    margin-left: 25px;
+    margin-right: 25px;
+}
