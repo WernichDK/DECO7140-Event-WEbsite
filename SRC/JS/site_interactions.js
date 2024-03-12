@@ -1,10 +1,10 @@
-let discount_code = 5000;
-const discount_button = document.getElementById('discount-code');
-const showDiscountCode = () => {
-discount_code = discount_code + 1;
-alert("Your discount code is " + discount_code);
-}
-discount_button.addEventListener("click", showDiscountCode);
+//let discount_code = 5000;
+//const discount_button = document.getElementById('discount-code');
+//const showDiscountCode = () => {
+//discount_code = discount_code + 1;
+//alert("Your discount code is " + discount_code);
+//}
+//discount_button.addEventListener("click", showDiscountCode);
 
 // Base URL of the open Mateo API Endpoint
 const baseUrl = 'https://api.open-meteo.com/v1/forecast';
@@ -34,6 +34,10 @@ fetch(urlWithParams, requestOptions)
     .then(response => response.json())
     .then(data => {
         const weather = data.current_weather;
-        console.log("Current temperature: " + weather.temperature + "C");        
+        console.log("Current temperature: " + weather.temperature + "C"); 
+        const temperature_element = document.getElementById('current_temperature');
+        const windspeed_element = document.getElementById('current_windspeed');
+        temperature_element.innerText = weather.temperature + "C";
+        windspeed_element.innerText = weather.windspeed + "kph";        
     })
 .catch(error => console.log('error', error));
