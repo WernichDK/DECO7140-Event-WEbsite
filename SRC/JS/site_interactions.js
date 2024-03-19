@@ -41,3 +41,78 @@ fetch(urlWithParams, requestOptions)
         windspeed_element.innerText = weather.windspeed + "kph";        
     })
 .catch(error => console.log('error', error));
+
+//const temp = document.getElementById("temp"):
+
+// function renderContent(weather) {
+    //temp.innerHTML = weather.temperature
+    //wind.innerHTML = weather.windspeed
+//}
+
+//fetch(urlWithParams, requestOptions)
+//.then(response => response.json())
+//.then(json => console.log(json))
+
+//get subscribe form 
+const subscribeForm = document.getElementById('subscribe-form');
+
+const handleInputChange = () => {
+    let firstName = document.getElementById('firstName');
+    let suburb = document.getElementById('suburb');
+    let email = document.getElementById('email');
+    let button = document.getElementById('subscribe-submit-button');
+
+    if (firstName.value && suburb.Value && email.value && email.validilty.valid) {
+        button.classList.add('enabled');
+        button.disabled = false;
+    } else{
+        button.classlist.remove('enabled');
+        button.disabled = true;
+    }
+};
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+
+    let firstName = document.getElementById('firstName').value;
+    let suburb = document.getElementById('suburb').value;
+    let email = document.getElementById('email').value;
+
+    let responseMessage = document.getElementById('responseMessage')
+
+    let payload = {
+        subscriber_name: firstName,
+        subscriber_suburb: suburb,
+        subscriber_email: email
+    };
+
+    const url = 'https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/api/';
+    const method = 'POST';
+    const headers = {
+        'Content-Type': 'application/json',
+    };
+
+    fetch(url, {
+        method: method,
+        headers: headers,
+        body: JSON.stringify(payload)
+        
+    })
+    .then((response) => response.txt())
+    .then((data) => {
+        if (data === 'added') {
+            responseMessage.textContent = 'Subscription successful. Thanks you for subscribing!';
+        } else if (data === 'exists'){
+                responseMessage.textContent = 'This email address has already been used to subscribe.';
+        } else if (data === 'error') {
+            responseMessage.textContent = 'An error has occured with the API. Please try again later.'
+        }
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        responseMessage.textContent = 'An unexpected error occured. Please try again later.';
+    });
+};
+
+subscribeForm.addEventListener('input', handleInputChange);
+subscribeForm.addEventListener('submit', handleSubmit);
