@@ -3,7 +3,106 @@
     font-weight: 400;
     font-style: normal;
   }
+/*
+Color scheme created by N I S H I K I G O - Furniture Design Award 2014
+retrieved from color.adobe.com
+*/
+  :root{
+    --grn: #127369;
+    --drkgrn: #10403B;
+    --lgtgrn: #8AA6A3;
+    --urbanite: #4C5958;
+    --silver: #BFBFBF;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
 
   body{
     font-family: 'Bebas Neue';
-  }
+}
+
+
+h1{
+    color: var(--drkgrn)
+}
+
+/* FLexbox layout for overall page */
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex-header-menu, .flex-footer-menu, .flex-side-menu{
+    flex-shrink: 0;
+    background-color: var(--silver);
+    color: var(--drkgrn);
+    padding: 0px 4px 0px 4px;
+
+}
+
+.flex-main-content{
+    flex: 1;    
+}
+
+/*mobile first these rules apply by default*/
+.flex-header-menu{
+    display: none; /* hide the header */
+}
+
+.flex-footer-menu{
+    display: block; /* show the footer */
+}
+
+.flex-side-menu{
+    display: none; /* Hide side menu */
+}
+
+.main-container{
+    width: 100vw; /* set the width to full screen */
+}
+
+
+/* Tablets and phones in landscape */
+@media only screen and (min-width: 601px) and (max-width: 1194px) {
+
+    .flex-container{
+        flex-direction: row;
+    }
+
+    .flex-header-menu{
+        display:none; /*SHow the header*/
+    }
+
+    .flex-side-menu{
+        display: block;
+    }
+
+    .flex-footer-menu{
+        display:none; /*hide footer*/
+    }
+
+    
+}
+
+/* Desktop: these rules will be applied if the screen is wider than 1195px */
+@media only screen and (min-width: 1195px){
+    .flex-header-menu{
+        display:block; /*SHow the header*/
+    }
+
+    .flex-side-menu{
+        display: none;
+    }
+
+    .flex-footer-menu{
+        display:none; /*hide footer*/
+    }
+
+    .main-container-menu{
+        width: 75vw;
+    }
+}
