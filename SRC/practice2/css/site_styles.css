@@ -22,6 +22,7 @@ html, body{
 
   body{
     font-family: 'Bebas Neue';
+    background-color: var(--urbanite); 
 }
 
 

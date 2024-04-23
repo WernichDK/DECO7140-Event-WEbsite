@@ -1,0 +1,59 @@
+
+
+html, body {
+    /*background-color: #F2F4EF; */
+    background-color: linear-gradient(to right, #D9B95B, #F24B88, #3A8CBF, #F24B88, #D9B95B);
+    font-family: 'Bebas Neue';
+    
+    }
+
+    margin
+
+    h1 {
+        color: #379EA8;
+        }
+
+    p {
+        color: #000000;
+        
+    }
+
+.bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+.brand {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        background-image: linear-gradient(to right, #379EA8,#3A8CBF) ; /* new line – just copy and paste this line */
+        padding: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        border-radius: 25px;
+        }
+
+.page-links {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+        text-align: left;
+        background-color: #379EA8; /* new line – just copy and paste this line */
+        padding: 10px;
+        }
+
+.menu-button {
+            font-size: 20px;
+            color: white;
+            background-color: #379EA8;
+            padding: 2px 20px;
+            border-style: solid;
+            border-radius: 5px;
+            border-color: white;
+            }
+.main {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
