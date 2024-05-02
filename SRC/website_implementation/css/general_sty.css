@@ -11,23 +11,15 @@ retrieved from color.adobe.com
     --sal: #F29188;
 }
 
-html, body {
+body {
     /*background-color: #F2F4EF; */
     background: linear-gradient(to right, var(--pea), var(--yell), var(--sal));
     font-family: 'Bebas Neue';
+    margin: 0;
+    padding: 0;
     
     }
 
-    margin
-
-    h1 {
-        color: #379EA8;
-        }
-
-    p {
-        color: #000000;
-        
-    }
 
 .bebas-neue-regular {
         font-family: "Bebas Neue", sans-serif;
@@ -35,69 +27,110 @@ html, body {
         font-style: normal;
       }
 
-.grid-container{
-    height: 100%;
-}
-.brand {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    background-image: linear-gradient(to right, var(--sal),var(--prp)) ; /* new line – just copy and paste this line */
-    padding: 10px;
-    font-size: 25px;
-    font-weight: bold;
+
+h1{
     color: var(--dprp);
-    border-radius: 25px;
+}
+.flex-container{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
     }
 
-
-.menu-button {
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--dprp);
-    background-color: transparent;
-    border: transparent;
-    font-family: 'Bebas Neue';
-           
-            
-            
-            }
-.main{
-    margin: 0 auto;
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-}
-.music-feed {
-   /* grid-column-start: 5;
-    grid-column-end: 10;
-    grid-row-start: 1;
-    grid-row-end: 15;
-    width: 75%; */
-    flex: 1;
-    text-align: left;
-    border-style: solid;
-    border-radius: 10px;
-    border-color: #000000;
-    padding: 25px;
-    height: 75%;
+.flex-header-menu, .flex-footer-menu, .flex-side-menu {
+    flex-shrink: 0;
+    padding: 0px 4px 0px 4px;
+    background-image: linear-gradient(to left, var(--prp), var(--sal));
 }
 
-.recommended-feed{
-   /* grid-column-start: 11;
-    grid-column-end: 14;
-    grid-row-start: 1;
-    grid-row-end: 15; */
+.flex-main-content {
     flex: 1;
-    border-style: solid;
-    border-color: #000000;
-    border-radius: 10px;
-        
 }
 
-.player{
-    flex: 1;
-    border: 3px solid transparent;
-    border-radius: 25px;
-    border-image: linear-gradient(to left, var(--dprp), var(--prp)) 1;
+.flex-header-menu {
+    display: none;
+}
+
+.flex-side-menu {
+    display: none;
+}
+.flex-footer-menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 2vh 5vw;
+}
+.main-content {
+    width: 100vw;
+}
+
+
+/*Tablets and phones in landscape - applied if screen size is wider than 601px and less than 1195px wide */
+@media only screen and (min-width: 601px) and (max-width: 1194px) {
+    .flex-container {
+        flex-direction: row;
+    }
+    .flex-header-menu {
+        display: none;
+    }
+    .flex-side-menu {
+        display: grid;
+        grid-auto-rows: min-content;
+        justify-items: center;
+        align-items: start;
+        gap: 3vh;
+        text-align: center;
+    }
+    .flex-side-menu span {
+        display: block;
+    }
+    .flex-footer-menu {
+        display: none;
+    }
     
 }
+
+/*Desktop - applied if screen size is wider than 1194px */
+@media only screen and (min-width: 1195px) {
+    .flex-header-menu {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        padding: 2vh 5vw;
+    }
+    .header-name {
+        text-align: left;
+    }
+    .header-links {
+        justify-self: left;
+    }
+    .header-links a {
+        padding: 0 10px;
+        color: var(--dprp);
+        white-space: nowrap;
+    }
+    .header-links a:hover {
+        border-bottom: 1px solid var(--dprp);
+    }
+    .flex-side-menu {
+        display: none;
+    }
+    .flex-footer-menu {
+        display: none;
+    }
+    .main-container-menu {
+        width: 75wv;
+    }
+}
+
+.header-name, .header-links {
+    font-size: larger;
+}
+
+.menu-button {
+    color: var(--dprp);
+    text-decoration: none !important;
+    font-weight: 600;
+           
+    }

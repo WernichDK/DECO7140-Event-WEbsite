@@ -7,6 +7,7 @@
 
         <!--Linking external style sheet -->
         <link rel="stylesheet" href="css/general_sty.css">
+        <link rel="stylesheet" href="css/index_style.css">
         
         <!--Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,47 +16,68 @@
 
     </head>
     <body>
-        <div class="grid-container">
-            <div class="brand">Website name
-
+        <div class="flex-container">
+            <header class="flex-header-menu header-menu" aria-label="Main menu">
+                <div class="header-name">
+                    <a href="" class="menu-button" tabindex="0">top menu</a>
+                </div>
+                <div class="header-links">
+                    <a href="index.html"><span class="menu-button" tabindex="0">Profile</span></a>
+                    <a href="gallery.html"><span class="menu-button" tabindex="0">Your Library</span></a>
+                    <a href="about.html"><span class="menu-button" tabindex="0">Discover</span></a>
+                    <a href=""><span class="menu-button" tabindex="0">Login/Register</span></a>
+                    <a href=""><span class="menu-button" tabindex="0">Support</span></a>
+                </div>
                 
-                    <a href="index.html"><button class="menu-button">Profile</button></a>
-                    <a href="gallery.html"><button class="menu-button">Your Library</button></a>
-                    <a href="about.html"><button class="menu-button">Discover</button></a>
-                    <a href=""><button class="menu-button">Login/Register</button></a>
-                    <a href=""><button class="menu-button">Support</button></a>
+             
+                
               
-            </div>
+            </header>
+            <aside class="flex-side-menu side-menu" aria-label="Main Menu">
+                    Side menu
+                    <a href="index.html"><span class="menu-button" aria-label="link to profile page">Profile</span></a>
+                    <a href="gallery.html"><span class="menu-button" aria-label="link to your libary">Your Library</span></a>
+                    <a href="about.html"><span class="menu-button" aria-label="link to discover page">Discover</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to login/register page">Login/Register</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to support page">Support</span></a>
+            </aside>
             
-        
-            
 
-            <div class="main">
-
-                <div class="player">
-                    <h1>Player</h1>
-                </div>
-
-                <div class = "music-feed">
-
-                    <h1>Music feed</h1>
-        
-                </div>
+            <section class="flex-main-content main-content" aria-label="main content">
+                <div class="centered-content">
+                    <div class="player">
+                        <h1>Player</h1>
+                    </div>
     
-                <div class = "recommended-feed">
-                    <h1>Recommended feed</h1>
-                </div>
-
-                
-            </div>
-
+                    <div class = "music-feed">
+    
+                        <h1>Music feed</h1>
             
+                    </div>
+        
+                    <div class = "recommended-feed">
+                        <h1>Recommended feed</h1>
+                    </div>
+    
+                </div>
+                
+                
+            </section>
+
+        <footer class="flex-footer-menu footer-menu" aria-label="main menu">
+                    bottom menu
+                    <a href="index.html"><span class="menu-button">Profile</span></a>
+                    <a href="gallery.html"><span class="menu-button">Your Library</span></a>
+                    <a href="about.html"><span class="menu-button">Discover</span></a>
+                    <a href=""><span class="menu-button">Login/Register</span></a>
+                    <a href=""><span class="menu-button">Support</span></a>
+        </footer>
             
 
 
             
         </div> <!--CLoses grid container div-->
 
-        
+        <script src="js/site_interactions.js"></script>
     </body>
 </html>

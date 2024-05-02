@@ -1,0 +1,26 @@
+:root{
+    --prp: #6D5DA6;
+    --dprp: #4A4873;
+    --yell: #F2C572;
+    --pea: #F2A679;
+    --sal: #F29188;
+}
+.flex-main-content {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 20px 10px;
+}
+.centered-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.player, .music-feed, .recommended-feed {
+    flex: 1;
+    margin: 0 10px;
+    border: 3px solid var(--prp);
+    padding: 20px;
+    border-radius: 20px;
+    height: auto;
+}
