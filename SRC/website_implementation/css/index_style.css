@@ -8,19 +8,49 @@
 .flex-main-content {
     display: flex;
     justify-content: center;
-    align-items: top;
+    
     padding: 20px 10px;
 }
 .centered-content {
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: auto;
+}
+.now-play {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+.now-play > h2 {
+    flex: 1;
+}
+
+.now-play > img {
+    
+    width: 15vw;
+    height: 15vw;
+    
 }
 .player, .music-feed, .recommended-feed {
+    
     flex: 1;
     margin: 0 10px;
     border: 3px solid var(--prp);
     padding: 20px;
     border-radius: 20px;
-    height: auto;
+    
+}
+.interact {
+    flex: 1;
+    justify-content: flex-end;
+    
+}
+.interact > a{
+    text-decoration: none;
+
+}
+.interact a:hover{
+     
+    border-bottom: 1px solid var(--dprp);
 }

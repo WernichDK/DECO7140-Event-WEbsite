@@ -31,6 +31,19 @@ body {
 h1{
     color: var(--dprp);
 }
+
+.header-links > a {
+    text-decoration: none;
+
+}
+
+.menu-button {
+    color: var(--dprp);
+    text-decoration: none;
+    font-weight: 600;
+           
+    }
+
 .flex-container{
         display: flex;
         flex-direction: column;
@@ -45,6 +58,8 @@ h1{
 
 .flex-main-content {
     flex: 1;
+    width: 99vw;
+    height: auto;
 }
 
 .flex-header-menu {
@@ -61,9 +76,7 @@ h1{
     align-items: center;
     padding: 2vh 5vw;
 }
-.main-content {
-    width: 100vw;
-}
+
 
 
 /*Tablets and phones in landscape - applied if screen size is wider than 601px and less than 1195px wide */
@@ -81,6 +94,11 @@ h1{
         align-items: start;
         gap: 3vh;
         text-align: center;
+    }
+    .flex-header-menu, .flex-footer-menu, .flex-side-menu {
+        flex-shrink: 0;
+        padding: 0px 4px 0px 4px;
+        background-image: linear-gradient(to top, var(--prp), var(--sal));
     }
     .flex-side-menu span {
         display: block;
@@ -126,11 +144,7 @@ h1{
 
 .header-name, .header-links {
     font-size: larger;
+    text-decoration: none;
 }
 
-.menu-button {
-    color: var(--dprp);
-    text-decoration: none !important;
-    font-weight: 600;
-           
-    }
+
