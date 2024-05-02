@@ -1,8 +1,19 @@
 
+/*
+Color scheme created by DSORDER. - SUPERNOVA
+retrieved from color.adobe.com
+*/
+:root{
+    --prp: #6D5DA6;
+    --dprp: #4A4873;
+    --yell: #F2C572;
+    --pea: #F2A679;
+    --sal: #F29188;
+}
 
 html, body {
     /*background-color: #F2F4EF; */
-    background-color: linear-gradient(to right, #D9B95B, #F24B88, #3A8CBF, #F24B88, #D9B95B);
+    background: linear-gradient(to right, var(--pea), var(--yell), var(--sal));
     font-family: 'Bebas Neue';
     
     }
@@ -24,36 +35,69 @@ html, body {
         font-style: normal;
       }
 
+.grid-container{
+    height: 100%;
+}
 .brand {
-        grid-column: 1 / span 2;
-        grid-row: 1;
-        background-image: linear-gradient(to right, #379EA8,#3A8CBF) ; /* new line – just copy and paste this line */
-        padding: 10px;
-        font-size: 25px;
-        font-weight: bold;
-        color: white;
-        border-radius: 25px;
-        }
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    background-image: linear-gradient(to right, var(--sal),var(--prp)) ; /* new line – just copy and paste this line */
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dprp);
+    border-radius: 25px;
+    }
 
-.page-links {
-        grid-column: 1 / span 1;
-        grid-row: 1;
-        text-align: left;
-        background-color: #379EA8; /* new line – just copy and paste this line */
-        padding: 10px;
-        }
 
 .menu-button {
-            font-size: 20px;
-            color: white;
-            background-color: #379EA8;
-            padding: 2px 20px;
-            border-style: solid;
-            border-radius: 5px;
-            border-color: white;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--dprp);
+    background-color: transparent;
+    border: transparent;
+    font-family: 'Bebas Neue';
+           
+            
+            
             }
-.main {
-    margin-left: 25px;
-    margin-right: 25px;
+.main{
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.music-feed {
+   /* grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 15;
+    width: 75%; */
+    flex: 1;
+    text-align: left;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #000000;
+    padding: 25px;
+    height: 75%;
 }
 
+.recommended-feed{
+   /* grid-column-start: 11;
+    grid-column-end: 14;
+    grid-row-start: 1;
+    grid-row-end: 15; */
+    flex: 1;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 10px;
+        
+}
+
+.player{
+    flex: 1;
+    border: 3px solid transparent;
+    border-radius: 25px;
+    border-image: linear-gradient(to left, var(--dprp), var(--prp)) 1;
+    
+}

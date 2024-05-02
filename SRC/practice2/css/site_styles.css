@@ -4,15 +4,15 @@
     font-style: normal;
   }
 /*
-Color scheme created by N I S H I K I G O - Furniture Design Award 2014
+Color scheme created by DSORDER. - SUPERNOVA
 retrieved from color.adobe.com
 */
   :root{
-    --grn: #127369;
-    --drkgrn: #10403B;
-    --lgtgrn: #8AA6A3;
-    --urbanite: #4C5958;
-    --silver: #BFBFBF;
+    --prp: #6D5DA6;
+    --dprp: #4A4873;
+    --yell: #F2C572;
+    --pea: #F2A679;
+    --sal: #F29188;
 }
 
 html, body{
@@ -22,12 +22,12 @@ html, body{
 
   body{
     font-family: 'Bebas Neue';
-    background-color: var(--urbanite); 
+    background-color: var(--dprp); 
 }
 
 
 h1{
-    color: var(--drkgrn)
+    color: var(--dprp)
 }
 
 /* FLexbox layout for overall page */
