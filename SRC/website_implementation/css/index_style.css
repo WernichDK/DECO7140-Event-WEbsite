@@ -28,8 +28,8 @@
 
 .now-play > img {
     
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 10vw;
     
 }
 .player, .music-feed, .recommended-feed {
@@ -44,14 +44,33 @@
 }
 .interact {
     flex: 1;
-    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
     
 }
 .interact > a{
     text-decoration: none;
+    align-self: end;
+    font-size: large;
+    padding: 10px;
 
 }
 .interact a:hover{
      
     border-bottom: 1px solid var(--dprp);
+}
+.altiar {
+    display: flex;
+    flex-direction: Row;
+    border: 1px solid black;
+    
+}
+.altiar > h2 {
+    align-self: flex-start;
+    padding: 10px;
+}
+.altiar > img {
+    width: 10vw;
+    height: 10vw;
 }

@@ -148,3 +148,8 @@ h1{
 }
 
 
+.search-bar {
+    background-color: var(--sal);
+    border-radius: 10px;
+    border: 0px;
+}
