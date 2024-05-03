@@ -48,12 +48,32 @@
                 <div class="centered-content">
                     <div class="player">
                         <h1>Player</h1>
-                        <div class="now-play">
-                            <img src="media/bfe.jpg" alt="">
-                            <h2 class="song">BFE <br>
-                                By Janis Zelinski
-                            </h2>
-                            
+                        <div class="playinf">
+                            <div class="now-playing">PLAYING x OF y</div>
+                            <div class="albumcov"></div>
+                            <div class="sname">Song Name</div>
+                            <div class="aname">Artist Name</div>
+                        <div class="plabut">
+                            <div class="prevson" onclick="prevSong()">
+                                <i class="fa fa-step-backward fa-2x"></i>
+                            </div>
+                            <div class="pause" onclick="pauseSong()">
+                                <i class="fa fa-play-circle fa-5x"></i>
+                            </div>
+                            <div class="nextson" onclick="nextSong()">
+                                <i class="fa fa-step-forward fa-2x"></i>
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="time">00:00</div>
+                            <input type="range" min="1" max="100" value="0" class="seek-slid" onchange="seekTo()">
+                            <div class="totduration">00:00</div>
+                        </div>
+                        <div class="slider">
+                            <i class="fa fa-volume-down"></i>
+                            <input type="range" min="1" max="100" value="99" class="volume-slid" onchange="setVolume()">
+                            <i class="fa fa-volume-up"></i>
+                        </div>
                         </div>
                         <div class="interact">
                             <a href="" class="intbut" tabindex="0"><span>Like</span></a> <br>
@@ -71,7 +91,31 @@
                             <img src="media/c4u.jpg" alt="">
                             <h2>Care 4 U <br> by Sam Alfred</h2>
                         </div>
-            
+                        
+                        <div class="altiar">
+                            <img src="media/picanya.jpg" alt="">
+                            <h2>Picanya 2400 <br> by Kettama</h2>
+                        </div>
+                        
+                        <div class="altiar">
+                            <img src="media/hylt.jpg" alt="">
+                            <h2>Hit Ya Like That<br> by DJ STREETMODE</h2>
+                        </div>
+                        
+                        <div class="altiar">
+                            <img src="media/hbrs.jpg" alt="">
+                            <h2>Heartbreak Repair System<br> by DJ Hearstring</h2>
+                        </div>
+
+                        <div class="altiar">
+                            <img src="media/hp.jpg" alt="">
+                            <h2>Hydroplane<br> by Cochise</h2>
+                        </div>
+                        
+                        <div class="altiar">
+                            <img src="media/pc.jpg" alt="">
+                            <h2>PROTEIN/CREATINE<br> by Cochise</h2>
+                        </div>
                     </div>
         
                     <div class = "recommended-feed">
@@ -98,5 +142,6 @@
         </div> <!--CLoses grid container div-->
 
         <script src="js/site_interactions.js"></script>
+        <script src="js/player.js"></script>
     </body>
 </html>
