@@ -50,7 +50,7 @@
                     <div class="player">
                         <h1>Player</h1>
                         <div class="playinf">
-                            <div class="now-playing">PLAYING x OF y</div>
+                            
                             <div class="albumcov"></div>
                             <div class="sname">Song Name</div>
                             <div class="aname">Artist Name</div>
@@ -58,7 +58,7 @@
                             <div class="prevson" onclick="prevSong()">
                                 <i class="fa fa-step-backward fa-2x"></i>
                             </div>
-                            <div class="pause" onclick="pauseSong()">
+                            <div class="pause" onclick="playpauseSong()">
                                 <i class="fa fa-play-circle fa-5x"></i>
                             </div>
                             <div class="nextson" onclick="nextSong()">
@@ -89,33 +89,43 @@
                         <h1>Music feed</h1>
 
                         <div class="altiar">
-                            <img src="media/c4u.jpg" alt="">
+                            <img src="media/c4u.jpg" alt="" onclick="loadSong(2); playSong()">
                             <h2>Care 4 U <br> by Sam Alfred</h2>
                         </div>
                         
                         <div class="altiar">
-                            <img src="media/picanya.jpg" alt="">
+                            <img src="media/picanya.jpg" alt="" onclick="loadSong(1); playSong()">
                             <h2>Picanya 2400 <br> by Kettama</h2>
                         </div>
                         
                         <div class="altiar">
-                            <img src="media/hylt.jpg" alt="">
+                            <img src="media/hylt.jpg" alt="" onclick="loadSong(4); playSong()">
                             <h2>Hit Ya Like That<br> by DJ STREETMODE</h2>
                         </div>
                         
                         <div class="altiar">
-                            <img src="media/hbrs.jpg" alt="">
+                            <img src="media/hbrs.jpg" alt="" onclick="loadSong(5); playSong()">
                             <h2>Heartbreak Repair System<br> by DJ Hearstring</h2>
                         </div>
 
                         <div class="altiar">
-                            <img src="media/hp.jpg" alt="">
+                            <img src="media/hp.jpg" alt="" onclick="loadSong(6); playSong()">
                             <h2>Hydroplane<br> by Cochise</h2>
                         </div>
                         
                         <div class="altiar">
-                            <img src="media/pc.jpg" alt="">
+                            <img src="media/pc.jpg" alt="" onclick="loadSong(7); playSong()">
                             <h2>PROTEIN/CREATINE<br> by Cochise</h2>
+                        </div>
+
+                        <div class="altiar">
+                            <img src="media/system.jpg" alt="" onclick="loadSong(3); playSong()">
+                            <h2>System<br> by Salute</h2>
+                        </div>
+
+                        <div class="altiar">
+                            <img src="media/bfe.jpg" alt="" onclick="loadSong(0); playSong()">
+                            <h2>BFE<br> by Janis Zelinsky</h2>
                         </div>
                     </div>
         
