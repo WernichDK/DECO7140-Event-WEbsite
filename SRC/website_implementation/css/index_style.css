@@ -63,7 +63,7 @@
 .altiar {
     display: flex;
     flex-direction: Row;
-    border: 1px solid black;
+    
     padding: 10px 0px 10px 0px;
     
 }
@@ -76,8 +76,23 @@
     height: 10vw;
 }
 .music-feed {
-    overflow: scroll;
+    
     height: 85vh;
+    padding-top: 30px;
+}
+.music-feed > h1{
+    position: static;
+    align-self: flex-start;
+    
+    
+}
+.musscrol {
+    height: 85vh;
+    padding-top: 30px;
+    overflow: scroll;
+}
+.altiar > img:hover {
+    border: 3px solid var(--prp);
 }
 .playinf {
     display: flex;
