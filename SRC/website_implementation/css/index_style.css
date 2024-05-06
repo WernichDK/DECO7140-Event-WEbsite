@@ -105,6 +105,7 @@
     margin: 25px;
     height: 10vw;
     width: 10vw;
+    flex-shrink: 0;
     
     background-size: cover;
     background-position: center;

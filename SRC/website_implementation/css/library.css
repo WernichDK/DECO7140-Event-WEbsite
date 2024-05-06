@@ -1,0 +1,63 @@
+.libcon {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.playlik {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.playlik > i {
+    justify-self: flex-end;
+}
+.playlists {
+    flex: 1;
+    margin: 0 10px;
+    border: 3px solid var(--prp);
+    padding: 20px;
+    border-radius: 20px;
+    height: 65vh;
+    padding-top: 30px;
+}
+.likeson {
+    flex: 1;
+    margin: 0 10px;
+    border: 3px solid var(--prp);
+    padding: 20px;
+    border-radius: 20px;
+
+}
+.lib-player {
+    margin: 0 10px;
+    border: 3px solid var(--prp);
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+.playinf {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+    
+}
+
+.plabut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.slider {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sname, .aname {
+    flex-shrink: 0;
+    padding-bottom: 10px;
+}
