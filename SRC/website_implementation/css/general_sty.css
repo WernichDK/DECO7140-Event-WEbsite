@@ -129,7 +129,7 @@ h1{
         white-space: nowrap;
     }
     .header-links a:hover {
-        border-bottom: 1px solid var(--dprp);
+        border-bottom: 3px solid var(--dprp);
     }
     .flex-side-menu {
         display: none;
