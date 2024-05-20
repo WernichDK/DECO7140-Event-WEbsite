@@ -3,6 +3,7 @@ const audio_file = document.getElementById('audio_file');
 const my_website_code = "wen123";
 const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/musicians/";
 const postMusicAudioMethod = "POST";
+const uploaded_songs = document.getElementById('uploaded-songs');
 
 const triggerFileInput = () => {
     audio_file.click();
@@ -55,9 +56,7 @@ const handleFormSubmit = event => {
 };
 
 
-songuplab.addEventListener('click', triggerFileInput);
-audio_file.addEventListener('change', handleFileChange);
-submitSong.addEventListener("submit", handleFormSubmit);
+
 
 const getUploadedSongs = () => {
     const queryParams = {
@@ -77,9 +76,36 @@ const getUploadedSongs = () => {
         }
         return response.json();
     })
-    .then(song => console.log(song))
+    .then(song => {
+        console.log(song);
+        while (uploaded_songs.firstChild) {
+            uploaded_songs.removeChild(uploaded_songs.firstChild);
+        }
+        song.forEach(song => {
+            const songTemplate = `
+                <article class="col-12 col-md-12 col-lg-6">
+                    <div class="card" role="group" aria-labelledby="card${song.id}-title" aria-describedby="card${event.id}-desc">
+                        <h2 class="card-header p-2" id="card${song.id}-title">${song.name}</h2>
+                        
+                        <p class="card-body-text p-2">${song.description}</p>
+                        <p class="card-body-text px-2"><strong>Genre:</strong> ${song.genre}</p>
+                        <p class="card-body-text px-2"><strong>Description:</strong> ${song.description}</p>
+                        <p class="card-body-text px-2"><strong>Message:</strong> ${song.message}</p>
+
+                    </div>
+                </article>
+            `;
+            uploaded_songs.innerHTML += songTemplate;
+        })
+    })
     .catch(error => {
         console.error("Error processing song:", error.message);
-        alert("There was a problem loading events. Please referesh the page to try again.");
+        alert("There was a problem loading songs. Please referesh the page to try again.");
     });
 };
+
+songuplab.addEventListener('click', triggerFileInput);
+audio_file.addEventListener('change', handleFileChange);
+submitSong.addEventListener("submit", handleFormSubmit);
+
+getUploadedSongs();
