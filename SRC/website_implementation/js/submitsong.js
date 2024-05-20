@@ -84,7 +84,7 @@ const getUploadedSongs = () => {
         song.forEach(song => {
             const songTemplate = `
                 <article class="col-12 col-md-12 col-lg-6">
-                    <div class="card" role="group" aria-labelledby="card${song.id}-title" aria-describedby="card${event.id}-desc">
+                    <div class="card" role="group" aria-labelledby="card${song.id}-title" aria-describedby="card${song.id}-desc">
                         <h2 class="card-header p-2" id="card${song.id}-title">${song.name}</h2>
                         
                         <p class="card-body-text p-2">${song.description}</p>
