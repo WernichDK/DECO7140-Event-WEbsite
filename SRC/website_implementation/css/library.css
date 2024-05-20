@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     height: auto;
+    padding: 10px;
 }
 
 .playlik {
@@ -21,7 +22,7 @@
     padding: 20px;
     border-radius: 20px;
     height: 65vh;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
 
@@ -39,6 +40,7 @@
     border: 3px solid var(--prp);
     padding: 20px;
     border-radius: 20px;
+    padding-top: 10px;
 
 }
 .lib-player {
@@ -46,6 +48,7 @@
     border: 3px solid var(--prp);
     padding: 20px;
     border-radius: 20px;
+    padding-top: 10px;
     
 }
 .playinf {

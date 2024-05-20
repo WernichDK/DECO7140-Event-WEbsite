@@ -71,7 +71,41 @@
     display:none;
 }
 
+
+
+.uploaded_songs{
+    align-self: flex-start;
+    border: 1px solid black;
+    padding: 10px;
+
+}
 .profcon {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.submit-song-form, .uploaded-songs {
+    flex: 1; 
+    height: 85vh;
+    padding-top: 30px;
+    overflow: scroll;
+    margin: 0 10px;
+    border: 3px solid var(--prp);
+   
+    border-radius: 20px;
+}
+
+.submit-song-form, .uploaded-songs {
+    
+    padding: 10px;
+    
+}
+.card{
+    margin: 0 10px;
+    border: 3px solid var(--prp);
+    padding: 5px;
+    border-radius: 20px;
 }

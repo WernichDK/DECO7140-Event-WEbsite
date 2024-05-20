@@ -5,6 +5,8 @@
     --pea: #F2A679;
     --sal: #F29188;
 }
+/*https://color.adobe.com/search?q=Synthwave&t=term*/
+
 .flex-main-content {
     display: flex;
     justify-content: center;
@@ -40,6 +42,7 @@
     border: 3px solid var(--prp);
     padding: 20px;
     border-radius: 20px;
+    padding-top: 10px;
     
 }
 .interact {
@@ -78,7 +81,7 @@
 .music-feed {
     
     height: 85vh;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .music-feed > h1{
     position: static;

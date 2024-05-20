@@ -29,8 +29,8 @@
                 </div>
                 <div class="header-links">
                     <a href="profile.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
-                    <a href="gallery.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
-                    <a href="about.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
+                    <a href="library.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
+                    <a href="gallery.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
                     <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
                     <a href=""><span class="menu-button" aria-label="link to support page" tabindex="0">Support</span></a>
                     <input class = "search-bar" type="text" placeholder="Search...">
@@ -86,71 +86,71 @@
                        </form>
                     </div>
                     <div class="uploaded-songs" id="uploaded_songs">
-                        <h2>Your Uploaded Songs</h2>
+                        <h2 !important>Your Uploaded Songs </h2>
 
                     </div>
-                    <div class="lib-player">
-                        <h1>Player</h1>
-                        <div class="playinf">
-                            <div class="abna"></div>
-                            <div class="albumcov"></div>
+                    
+                </div> <!--closes main div -->  
+                <div class="lib-player">
+                    <h1>Player</h1>
+                    <div class="playinf">
+                        <div class="abna"></div>
+                        <div class="albumcov"></div>
 
-                            <div class="soinf">
-                                <div class="sname">Song Name</div>
+                        <div class="soinf">
+                            <div class="sname">Song Name</div>
+                        
+                            <div class="aname">Artist Name</div>
+                        </div>    
                             
-                                <div class="aname">Artist Name</div>
-                            </div>    
-                                
 
-                        <div class="plabut">
+                    <div class="plabut">
 
-                                <div class="prevson" onclick="prevSong()">
-                                    <i class="fa fa-step-backward fa-2x"></i>
-                                </div>
-    
-                                <div class="pause" onclick="playpauseSong()">
-                                    <i class="fa fa-play-circle fa-5x"></i>
-                                </div>
-    
-                                <div class="nextson" onclick="nextSong()">
-                                    <i class="fa fa-step-forward fa-2x"></i>
-                                </div>
+                            <div class="prevson" onclick="prevSong()">
+                                <i class="fa fa-step-backward fa-2x"></i>
+                            </div>
 
-                                <div class="slider">
+                            <div class="pause" onclick="playpauseSong()">
+                                <i class="fa fa-play-circle fa-5x"></i>
+                            </div>
 
-                                    <div class="time">00:00</div>
-                                    <input type="range" min="1" max="100" value="0" class="seek-slid" onchange="seekTo()">
-                                    <div class="totduration">00:00</div>
-        
-                                </div>
-    
-                        </div>
+                            <div class="nextson" onclick="nextSong()">
+                                <i class="fa fa-step-forward fa-2x"></i>
+                            </div>
 
-                        <div class="slides">
-                            
-                            
-                            
-    
                             <div class="slider">
-    
-                                <i class="fa fa-volume-down"></i>
-                                <input type="range" min="1" max="100" value="99" class="volume-slid" onchange="setVolume()">
-                                <i class="fa fa-volume-up"></i>
+
+                                <div class="time">00:00</div>
+                                <input type="range" min="1" max="100" value="0" class="seek-slid" onchange="seekTo()">
+                                <div class="totduration">00:00</div>
     
                             </div>
-                        </div>
 
+                    </div>
+
+                    <div class="slides">
                         
-                        </div>
-                        <div class="interact">
-                            <a href="" class="intbut" tabindex="0"><span>Like</span></a> <br>
-                            <a href="" class="intbut" tabindex="0"><span>Share</span></a> <br>
-                            <a href="" class="intbut" tabindex="0"><span>Comment</span></a> <br>
-                            <a href="" class="intbut" tabindex="0"><span>Add to Playlist</span></a>
+                        
+                        
+
+                        <div class="slider">
+
+                            <i class="fa fa-volume-down"></i>
+                            <input type="range" min="1" max="100" value="99" class="volume-slid" onchange="setVolume()">
+                            <i class="fa fa-volume-up"></i>
+
                         </div>
                     </div>
-                </div> <!--closes main div -->  
+
                     
+                    </div>
+                    <div class="interact">
+                        <a href="" class="intbut" tabindex="0"><span>Like</span></a> <br>
+                        <a href="" class="intbut" tabindex="0"><span>Share</span></a> <br>
+                        <a href="" class="intbut" tabindex="0"><span>Comment</span></a> <br>
+                        <a href="" class="intbut" tabindex="0"><span>Add to Playlist</span></a>
+                    </div>
+                </div>
 
                                 
                 
