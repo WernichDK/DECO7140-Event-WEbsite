@@ -43,6 +43,7 @@
     padding: 20px;
     border-radius: 20px;
     padding-top: 10px;
+    color: black;
     
 }
 .interact {
@@ -51,12 +52,14 @@
     flex-direction: row;
     
     
+    
 }
 .interact > a{
     text-decoration: none;
     align-self: end;
     font-size: large;
     padding: 10px;
+    color: black;
 
 }
 .interact a:hover{
@@ -176,3 +179,4 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
 .show {
     display: block;
 }
+

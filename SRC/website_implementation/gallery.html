@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Website Name</title>
+
+        <!--Linking external style sheet -->
+        <link rel="stylesheet" href="css/general_sty.css">
+        <link rel="stylesheet" href="css/index_style.css">
+        
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    </head>
+    <body>
+        <div class="flex-container">
+            <header class="flex-header-menu header-menu" aria-label="Main menu">
+                <div class="header-name">
+                    <a href="index.html" class="menu-button" tabindex="0">Home Page</a>
+                </div>
+                <div class="header-links">
+                    <a href="profile.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
+                    <a href="library.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
+                    <a href="gallery.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to support page" tabindex="0">Support</span></a>
+                    <input class = "search-bar" type="text" placeholder="Search...">
+                </div>
+                
+             
+                
+              
+            </header>
+            <aside class="flex-side-menu side-menu" aria-label="Main Menu">
+                    Side menu
+                    <a href="index.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
+                    <a href="library.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
+                    <a href="about.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to support page" tabindex="0">Support</span></a>
+            </aside>
+            
+
+            <section class="flex-main-content main-content" aria-label="main content">
+                <div class="centered-content">
+                    <div class="player">
+                        <h1>Player</h1>
+                        <div class="playinf">
+                            
+                            <div class="albumcov"></div>
+                            <div class="sname">Song Name</div>
+                            <div class="aname">Artist Name</div>
+                        <div class="plabut">
+                            <div class="prevson" onclick="prevSong()">
+                                <i class="fa fa-step-backward fa-2x"></i>
+                            </div>
+                            <div class="pause" onclick="playpauseSong()">
+                                <i class="fa fa-play-circle fa-5x"></i>
+                            </div>
+                            <div class="nextson" onclick="nextSong()">
+                                <i class="fa fa-step-forward fa-2x"></i>
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="time">00:00</div>
+                            <input type="range" min="1" max="100" value="0" class="seek-slid" onchange="seekTo()">
+                            <div class="totduration">00:00</div>
+                        </div>
+                        <div class="slider">
+                            <i class="fa fa-volume-down"></i>
+                            <input type="range" min="1" max="100" value="99" class="volume-slid" onchange="setVolume()">
+                            <i class="fa fa-volume-up"></i>
+                        </div>
+                        </div>
+                        <div class="interact">
+                            <a href="" class="intbut" tabindex="0"><span>Like</span></a> <br>
+                            <a href="" class="intbut" tabindex="0"><span>Share</span></a> <br>
+                            <a href="" class="intbut" tabindex="0"><span>Comment</span></a> <br>
+                            <a href="javascript:void(0)" class="intbut" id="addToPlaylist" onclick="addPlay()" tabindex="0">Add to playlist</span></a>
+                        </div>
+
+                        <form class="playlispopup" id="playlispop" enctype="multipart/form-data">
+                            <label for="playlistname">Create a new playlist:</label>
+                            <input type="text" id="playlistname" name="playlisname" placeholder="Enter playlist name here" required>
+                            <input type="submit" class="menu-button" value="Create Playlist">
+
+                        </form>
+
+                    </div>
+    
+                    <div class = "music-feed">
+    
+                        <h1>Music feed</h1>
+                        <div class="musscrol">
+                        <div class="altiar">
+                            <img src="media/c4u.jpg" alt="" onclick="loadSong(2); playSong()">
+                            <h2>Care 4 U <br> by Sam Alfred</h2>
+                        </div>
+                        
+                        <div class="altiar">
+                            <img src="media/picanya.jpg" alt="" onclick="loadSong(1); playSong()">
+                            <h2>Picanya 2400 <br> by Kettama</h2>
+                        </div>
+                        
+                        <div class="altiar">
+                            <img src="media/hylt.jpg" alt="" onclick="loadSong(4); playSong()">
+                            <h2>Hit Ya Like That<br> by DJ STREETMODE</h2>
+                        </div>
+                        
+                        <div class="altiar">
+                            <img src="media/hbrs.jpg" alt="" onclick="loadSong(5); playSong()">
+                            <h2>Heartbreak Repair System<br> by DJ Hearstring</h2>
+                        </div>
+
+                        <div class="altiar">
+                            <img src="media/hp.jpg" alt="" onclick="loadSong(6); playSong()">
+                            <h2>Hydroplane<br> by Cochise</h2>
+                        </div>
+                        
+                        <div class="altiar">
+                            <img src="media/pc.jpg" alt="" onclick="loadSong(7); playSong()">
+                            <h2>PROTEIN/CREATINE<br> by Cochise</h2>
+                        </div>
+
+                        <div class="altiar">
+                            <img src="media/system.jpg" alt="" onclick="loadSong(3); playSong()">
+                            <h2>System<br> by Salute</h2>
+                        </div>
+
+                        <div class="altiar">
+                            <img src="media/bfe.jpg" alt="" onclick="loadSong(0); playSong()">
+                            <h2>BFE<br> by Janis Zelinsky</h2>
+                        </div>
+                        </div>
+                    </div>
+        
+                    <div class = "recommended-feed">
+                        <h1>Recommended feed</h1>
+                    </div>
+    
+                </div>
+                
+                
+            </section>
+
+        <footer class="flex-footer-menu footer-menu" aria-label="main menu">
+                    bottom menu
+                    <a href="index.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
+                    <a href="gallery.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
+                    <a href="about.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to support page" tabindex="0">Support</span></a>
+        </footer>
+            
+
+
+            
+        </div> <!--CLoses grid container div-->
+
+        <script src="js/site_interactions.js"></script>
+        <script src="js/player.js"></script>
+        <script src="js/infscrol.js"></script>
+        <script src="js/playlistpopup.js"></script>
+
+    </body>
+</html>

@@ -1,4 +1,4 @@
-
+// The following JavaScript was implement as per a guide from https://www.geeksforgeeks.org/create-a-music-player-using-javascript/
 let album_cover = document.querySelector(".albumcov");
 let song_name = document.querySelector(".sname");
 let artist_name = document.querySelector(".aname");
