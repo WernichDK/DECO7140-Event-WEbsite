@@ -25,10 +25,10 @@
         <div class="flex-container">
             <header class="flex-header-menu header-menu" aria-label="Main menu">
                 <div class="header-name">
-                    <a href="" class="menu-button" tabindex="0">top menu</a>
+                    <a href="index.html" class="menu-button" tabindex="0">Home</a>
                 </div>
                 <div class="header-links">
-                    <a href="index.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
+                    <a href="profile.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
                     <a href="gallery.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
                     <a href="about.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
                     <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
@@ -51,9 +51,9 @@
             
 
             <section class="lib-main" aria-label="main content">
-                <div class="libcon">
+                <div class="profcon">
                     <div class="submit-song-form">
-                        <h2>Upload a song</h2>
+                        <div id="upfo"><h2>Upload a song</h2></div>
                        <form id="submitSong" class="subsong" enctype="multipart/form-data" >
                         <div class="form-group">
                             <label for="name">Name:</label>
@@ -85,7 +85,10 @@
                         </div>
                        </form>
                     </div>
-                    
+                    <div class="uploaded-songs">
+                        <h2>Your Uploaded Songs</h2>
+
+                    </div>
                     <div class="lib-player">
                         <h1>Player</h1>
                         <div class="playinf">

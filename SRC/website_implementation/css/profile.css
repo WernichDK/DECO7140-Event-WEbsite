@@ -9,6 +9,7 @@
 .form-group{
     display: block;
     margin-bottom: 0.5rem;
+    padding: 10px;
 
 }
 
@@ -16,19 +17,20 @@
 .form-group textarea {
     width: 85%;
     padding: 0.5rem;
-    border: 1px solid var(--dprp);
+    border: 3px solid var(--dprp);
     border-radius: 4px;
+    background: transparent;
 
 
 }
 
 .btn{
-    padding: 1vh 1vw;
+    padding: 10px;
     cursor: pointer;
     border: none;
     border-radius: 4px;
     transition:background-color 0.2s ease;
-
+    font-family:'Bebas Neue';
 }
 
 .btn-primary{
@@ -43,10 +45,15 @@
 }
 .submit-song-form{
     display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+#upfo {
+    padding: 20px;    
 }
 #songuplab{
     width: 50%;
-    padding: 1vw;
+    padding: 10px;
     background-color: var(--sal);
     color: var(--prp);
     cursor: pointer;
@@ -62,4 +69,9 @@
 
 #audio_file{
     display:none;
+}
+
+.profcon {
+    display: flex;
+    flex-direction: column;
 }
