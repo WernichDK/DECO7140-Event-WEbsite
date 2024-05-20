@@ -13,6 +13,8 @@
     justify-self: flex-end;
 }
 .playlists {
+    display: flex;
+    flex-direction: row;
     flex: 1;
     margin: 0 10px;
     border: 3px solid var(--prp);
@@ -21,6 +23,16 @@
     height: 65vh;
     padding-top: 30px;
 }
+
+
+
+.fa-solid, .fa-plus{
+    justify-self: flex-end;
+    
+    
+    flex: 1;
+}
+
 .likeson {
     flex: 1;
     margin: 0 10px;

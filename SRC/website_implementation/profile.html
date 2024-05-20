@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Website Name</title>
+
+        <!--Linking external style sheet -->
+        
+        <link rel="stylesheet" href="css/general_sty.css"> 
+        <link rel="stylesheet" href="css/index_style.css"> 
+        <link rel="stylesheet" href="css/library.css">
+        <link rel="stylesheet" href="css/profile.css">
+        
+        
+        <!--Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <script src="https://kit.fontawesome.com/9bea096392.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div class="flex-container">
+            <header class="flex-header-menu header-menu" aria-label="Main menu">
+                <div class="header-name">
+                    <a href="" class="menu-button" tabindex="0">top menu</a>
+                </div>
+                <div class="header-links">
+                    <a href="index.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
+                    <a href="gallery.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
+                    <a href="about.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to support page" tabindex="0">Support</span></a>
+                    <input class = "search-bar" type="text" placeholder="Search...">
+                </div>
+                
+             
+                
+              
+            </header>
+            <aside class="flex-side-menu side-menu" aria-label="Main Menu">
+                    Side menu
+                    <a href="index.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
+                    <a href="library.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
+                    <a href="about.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to support page" tabindex="0">Support</span></a>
+            </aside>
+            
+
+            <section class="lib-main" aria-label="main content">
+                <div class="libcon">
+                    <div class="submit-song-form">
+                        <h2>Upload a song</h2>
+                       <form id="submitSong" class="subsong" enctype="multipart/form-data" >
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="song_title">Song title:</label>
+                            <input type="text" id="song_title" name="song_title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="genre">Genre:</label>
+                            <input type="text" id="genre" name="genre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea name="description" id="description" rows="3"></textarea>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <input type="text" id="message" name="message" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="audio_file" id="songuplab">Audio file:</label>
+                            <input type="file" id="audio_file" name="audio_file" accept="audio/*" required>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn btn-primary" value="Submit Song">
+                        </div>
+                       </form>
+                    </div>
+                    
+                    <div class="lib-player">
+                        <h1>Player</h1>
+                        <div class="playinf">
+                            <div class="abna"></div>
+                            <div class="albumcov"></div>
+
+                            <div class="soinf">
+                                <div class="sname">Song Name</div>
+                            
+                                <div class="aname">Artist Name</div>
+                            </div>    
+                                
+
+                        <div class="plabut">
+
+                                <div class="prevson" onclick="prevSong()">
+                                    <i class="fa fa-step-backward fa-2x"></i>
+                                </div>
+    
+                                <div class="pause" onclick="playpauseSong()">
+                                    <i class="fa fa-play-circle fa-5x"></i>
+                                </div>
+    
+                                <div class="nextson" onclick="nextSong()">
+                                    <i class="fa fa-step-forward fa-2x"></i>
+                                </div>
+
+                                <div class="slider">
+
+                                    <div class="time">00:00</div>
+                                    <input type="range" min="1" max="100" value="0" class="seek-slid" onchange="seekTo()">
+                                    <div class="totduration">00:00</div>
+        
+                                </div>
+    
+                        </div>
+
+                        <div class="slides">
+                            
+                            
+                            
+    
+                            <div class="slider">
+    
+                                <i class="fa fa-volume-down"></i>
+                                <input type="range" min="1" max="100" value="99" class="volume-slid" onchange="setVolume()">
+                                <i class="fa fa-volume-up"></i>
+    
+                            </div>
+                        </div>
+
+                        
+                        </div>
+                        <div class="interact">
+                            <a href="" class="intbut" tabindex="0"><span>Like</span></a> <br>
+                            <a href="" class="intbut" tabindex="0"><span>Share</span></a> <br>
+                            <a href="" class="intbut" tabindex="0"><span>Comment</span></a> <br>
+                            <a href="" class="intbut" tabindex="0"><span>Add to Playlist</span></a>
+                        </div>
+                    </div>
+                </div> <!--closes main div -->  
+                    
+
+                                
+                
+            </section>
+
+        <footer class="flex-footer-menu footer-menu" aria-label="main menu">
+                    bottom menu
+                    <a href="index.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
+                    <a href="gallery.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
+                    <a href="about.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
+                    <a href=""><span class="menu-button" aria-label="link to support page" tabindex="0">Support</span></a>
+        </footer>
+            
+
+
+            
+        </div> <!--CLoses grid container div-->
+
+        <script src="js/site_interactions.js"></script>
+        <script src="js/player.js"></script>
+        <script src="js/infscrol.js"></script>
+        <script src="js/submitsong.js"></script>
+    </body>
+</html>

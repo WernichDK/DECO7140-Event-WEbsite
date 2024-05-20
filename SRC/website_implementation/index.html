@@ -20,10 +20,10 @@
         <div class="flex-container">
             <header class="flex-header-menu header-menu" aria-label="Main menu">
                 <div class="header-name">
-                    <a href="" class="menu-button" tabindex="0">top menu</a>
+                    <a href="index.html" class="menu-button" tabindex="0">Home Page</a>
                 </div>
                 <div class="header-links">
-                    <a href="index.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
+                    <a href="profile.html"><span class="menu-button" aria-label="link to profile page" tabindex="0">Profile</span></a>
                     <a href="library.html"><span class="menu-button" aria-label="link to your libary" tabindex="0">Your Library</span></a>
                     <a href="about.html"><span class="menu-button" aria-label="link to discover page" tabindex="0">Discover</span></a>
                     <a href=""><span class="menu-button" aria-label="link to login/register page" tabindex="0">Login/Register</span></a>
@@ -80,8 +80,16 @@
                             <a href="" class="intbut" tabindex="0"><span>Like</span></a> <br>
                             <a href="" class="intbut" tabindex="0"><span>Share</span></a> <br>
                             <a href="" class="intbut" tabindex="0"><span>Comment</span></a> <br>
-                            <a href="" class="intbut" tabindex="0"><span>Add to Playlist</span></a>
+                            <a href="javascript:void(0)" class="intbut" id="addToPlaylist" onclick="addPlay()" tabindex="0">Add to playlist</span></a>
                         </div>
+
+                        <form class="playlispopup" id="playlispop" enctype="multipart/form-data">
+                            <label for="playlistname">Create a new playlist:</label>
+                            <input type="text" id="playlistname" name="playlisname" placeholder="Enter playlist name here" required>
+                            <input type="submit" class="menu-button" value="Create Playlist">
+
+                        </form>
+
                     </div>
     
                     <div class = "music-feed">
@@ -156,5 +164,7 @@
         <script src="js/site_interactions.js"></script>
         <script src="js/player.js"></script>
         <script src="js/infscrol.js"></script>
+        <script src="js/playlistpopup.js"></script>
+
     </body>
 </html>
