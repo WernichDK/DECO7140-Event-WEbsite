@@ -34,7 +34,7 @@
     height: 10vw;
     
 }
-.player, .music-feed, .recommended-feed {
+.player, .music-feed, .recommended-feed, .login-form {
     display: flex;
     flex-direction: column;
     flex: 1;

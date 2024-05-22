@@ -1,24 +1,28 @@
-document.addEventListener("DOMContentLoaded", function () {
 
-    const registerForm = document.getElementById('registerForm');
+//this information is not retained in any way shape or form, i think this would require constructing and endpoint for this data through the use of an API
+//I hope we arent meant to know how to set up an API i have no clue :( this is only to show how this would function
+
     const registrationConfirm = document.getElementById('registration-confirm');
+    const registrationButt = document.getElementById('registrationbut');    
+    const fName = document.getElementById('fname');
+    const lName = document.getElementById('lname');
+    const email = document.getElementById('email');
+    const pwd = document.getElementById('pwd');
+    const cpwd = document.getElementById('cpwd');
+    const regform = document.getElementById('login-form');
 
-    const confirmReg = (event) => {
-        event.preventDefault();
 
-        let firstName = document.getElementById('fname').value;
-        let lastName = document.getElementById('lname').value;
-        let emailAd = document.getElementById('email').value;
-        let passWord = document.getElementById('pwd').value;
-        let passWordCon = document.getElementById('cpwd').value;
-    
-    
-        if (firstName && lastName && emailAd && passWord && passWordCon) {
-            registrationConfirm.textContent = 'Registration succesffuly submitted, please check your email to confirm.';
-        } else {
-            registrationConfirm.textContent = 'Registration unsuccesffuly submitted, please try again.';
-        }
+
+    function confirmReg() {       
+
+         
+        registrationConfirm.textContent = 'Registration succesffuly submitted, please check your email to confirm.';      
+        document.getElementById('fname').value = '';
+        document.getElementById('lname').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('pwd').value = '';
+        document.getElementById('cpwd').value = '';
+        
     };
 
-    registerForm.addEventListener("submit", confirmReg);
-});
+    registerButt.addEventListener("click", confirmReg);

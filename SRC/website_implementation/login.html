@@ -56,7 +56,7 @@
                     
                         <div class="login-form">
                             <h1>Register form:</h1>
-                           <form id="registerForm" class="subsong" method="post" enctype="multipart/form-data" >
+                           <div id="registerForm" class="subsong"  >
                             <div class="form-group">
                                 <label for="fname">First Name:</label>
                                 <input type="text" id="fname" name="fname" required>
@@ -78,12 +78,12 @@
                                 <input type="password" id="cpwd" name="cpwd" required>
                             </div>                       
                             <div>
-                                <input type="submit" id="regisBut" class="btn btn-primary" value="Submit Registration">
+                                <button class="btn btn-primary" id="registrationbut" onclick="confirmReg()">Submit Registration</button>
                             </div>
-                           </form>
+                        </div>
 
-                           <div id="registration-confirms">
-                            <h1 id="registration-confirm"></h1>
+                           <div id="registration-confirm">
+                            
                            </div>
                         </div>
                     
@@ -125,5 +125,6 @@
         <script src="js/player.js"></script>
         <script src="js/infscrol.js"></script>
         <script src="js/submitsong.js"></script>
+        <script src="js/registerform.js"></script>
     </body>
 </html>

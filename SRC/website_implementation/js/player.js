@@ -68,6 +68,24 @@ let song_list = [
         image: "media/pc.jpg",
         path: "media/pc.mp3",
     },
+    {
+        name: "TRUE STORY",
+        artist: "CRUSH3D",
+        image: "media/ts.jpg",
+        path: "media/ts.mp3",
+    },
+    {
+        name: "These Streets Look Dangerous",
+        artist: "X-Club",
+        image: "media/HTJ.jpg",
+        path: "media/HTJ.mp3",
+    },
+    {
+        name: "Flashback",
+        artist: "Benjamin",
+        image: "media/flashback.jpg",
+        path: "media/flashback.mp3",
+    },
 ];
 
 function loadSong(songindex) {
