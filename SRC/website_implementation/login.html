@@ -53,10 +53,40 @@
 
             <section class="lib-main" aria-label="main content">
                 <div class="discon">
-                    <div class="disco" id="about_me">
-                        <h1>Login/register form:</h1>
-                        <h2>Still under construction.</h2>
-                    </div>
+                    
+                        <div class="login-form">
+                            <h1>Register form:</h1>
+                           <form id="registerForm" class="subsong" method="post" enctype="multipart/form-data" >
+                            <div class="form-group">
+                                <label for="fname">First Name:</label>
+                                <input type="text" id="fname" name="fname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last Name:</label>
+                                <input type="text" id="lname" name="lname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" id="pwd" name="pwd" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cpwd">Confirm Password:</label>
+                                <input type="password" id="cpwd" name="cpwd" required>
+                            </div>                       
+                            <div>
+                                <input type="submit" id="regisBut" class="btn btn-primary" value="Submit Registration">
+                            </div>
+                           </form>
+
+                           <div id="registration-confirms">
+                            <h1 id="registration-confirm"></h1>
+                           </div>
+                        </div>
+                    
 
                     <div class="discover_songs">
                         <h2>About this website</h2>

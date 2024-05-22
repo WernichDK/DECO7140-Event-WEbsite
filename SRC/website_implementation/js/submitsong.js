@@ -43,8 +43,8 @@ const handleFormSubmit = event => {
     .then(data => {
         console.log(data.description);
         submitSong.reset();
-        songuplab.textContent = "Audio File:"
-        alert('Your song "${data.description}" was submitted successfully!');
+        songuplab.textContent = "Audio File:";
+        alert(`Your song "${data.description}" was submitted successfully!`);
     })
     .then(data => {
         getUploadedSongs();
