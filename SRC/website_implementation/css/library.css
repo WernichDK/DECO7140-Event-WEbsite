@@ -1,3 +1,11 @@
+:root{
+    --prp: #6D5DA6;
+    --dprp: #4A4873;
+    --yell: #F2C572;
+    --pea: #F2A679;
+    --sal: #F29188;
+}
+/*https://color.adobe.com/search?q=Synthwave&t=term*/
 .libcon {
     display: flex;
     flex-direction: column;
@@ -24,14 +32,14 @@
     height: 65vh;
     padding-top: 10px;
     overflow: scroll;
-    
+    scrollbar-color: var(--dprp);
 }
 
 .plalist {
     flex: 1;
     display: flex;
     flex-direction: column;
-    
+    overflow: scroll;
     height: fit-content;
     width: fit-content;
     padding: 10px;
@@ -75,6 +83,7 @@
     border-radius: 20px;
     padding-top: 10px;
     height: 65vh;
+    scrollbar-color: var(--dprp);
 
 }
 .lib-player {

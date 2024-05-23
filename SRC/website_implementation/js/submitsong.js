@@ -87,9 +87,10 @@ const getUploadedSongs = () => {
         song.forEach(song => {
             const songTemplate = `
                 <article class="col-12 col-md-12 col-lg-6">
-                    <div class="card" role="group" aria-labelledby="card${song.id}-title" aria-describedby="card${song.id}-desc">
-                        <h2 class="card-header p-2" id="card${song.id}-title"><strong>Title:</strong>${song.name}</h2>
+                    <div class="card" role="group"  aria-labelledby="card${song.id}-title" aria-describedby="card${song.id}-desc">
+                        <h2 class="card-header p-2"  id="card${song.id}-title"><strong>Title:</strong>${song.name}</h2>
                         <audio src="${song.audio_file}" alt="${song.name}"><source src="${song.audio_file}" type="audio/mp3"></audio>
+                        <p class="card-body-text px-2"><strong>Audio file:</strong> ${song.audio_file}</p>
                         <p class="card-body-text px-2"><strong>Genre:</strong> ${song.genre}</p>
                         <p class="card-body-text px-2"><strong>Description:</strong> ${song.description}</p>
                         <p class="card-body-text px-2"><strong>Message:</strong> ${song.message}</p>
@@ -105,6 +106,9 @@ const getUploadedSongs = () => {
         alert("There was a problem loading songs. Please referesh the page to try again.");
     });
 };
+
+
+
 
 songuplab.addEventListener('click', triggerFileInput);
 audio_file.addEventListener('change', handleFileChange);

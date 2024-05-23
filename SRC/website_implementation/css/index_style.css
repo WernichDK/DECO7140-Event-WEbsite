@@ -44,6 +44,7 @@
     border-radius: 20px;
     padding-top: 10px;
     color: black;
+    scrollbar-color: var(--dprp);
     
 }
 .interact {
