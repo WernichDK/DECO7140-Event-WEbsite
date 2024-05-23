@@ -15,17 +15,50 @@
 }
 .playlists {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex: 1;
     margin: 0 10px;
-    border: 3px solid var(--prp);
+    border: 3px solid var(--prp) ;
     padding: 20px;
     border-radius: 20px;
     height: 65vh;
     padding-top: 10px;
+    overflow: scroll;
+    
 }
 
+.plalist {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    
+    
+    
+}
 
+.abtiar {
+    display: flex;
+    flex-direction: Row;
+    
+    padding: 5px 0px 5px 0px;
+    
+}
+.abtiar > h2 {
+    align-self: flex-start;
+    padding: 5px;
+}
+.abtiar > img {
+    width: 5vw;
+    height: 5vw;
+}
+
+.abtiar > img:hover {
+    border: 3px solid var(--prp);
+}
 
 .fa-solid, .fa-plus{
     justify-self: flex-end;
