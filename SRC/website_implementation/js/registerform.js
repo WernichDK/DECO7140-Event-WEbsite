@@ -16,7 +16,7 @@
     function confirmReg() {       
 
          
-        registrationConfirm.textContent = 'Registration succesffuly submitted, please check your email to confirm.';      
+        registrationConfirm.textContent = `Registration succesffuly submitted, please check "${email.value}" to confirm.`;      
         document.getElementById('fname').value = '';
         document.getElementById('lname').value = '';
         document.getElementById('email').value = '';

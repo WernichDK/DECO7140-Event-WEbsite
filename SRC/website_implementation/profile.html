@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Website Name</title>
+        <title>Music Website</title>
 
         <!--Linking external style sheet -->
         
@@ -53,34 +53,33 @@
             <section class="lib-main" aria-label="main content">
                 <div class="profcon">
                     <div class="aboutme" id="about_me">
-                        <h2>About me </h2>
-                        <div class="login-form">
-                            <h1>Register form:</h1>
-                           <div id="registerForm" class="subsong"  >
-                            <div class="form-group">
-                                <label for="fname">First Name:</label>
-                                <input type="text" id="fname" name="fname" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lname">Last Name:</label>
-                                <input type="text" id="lname" name="lname" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Password:</label>
-                                <input type="password" id="pwd" name="pwd" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="cpwd">Confirm Password:</label>
-                                <input type="password" id="cpwd" name="cpwd" required>
-                            </div>                       
-                            <div>
-                                <button class="btn btn-primary" id="registrationbut" onclick="confirmReg()">Submit Registration</button>
-                            </div>
+                        <div class="abtinf">
+                            <h2 id="abtnam">About me </h2>
+                            
+                            <h2 id="abtpro"></h2>
+                            <h2 id="abtdesc"></h2>
                         </div>
+                        <div class="aboutmefom" id="aboutmefom">
+                             
+                            
+                        <div class="form-group">
+                            <label for="dispname">Display Name:</label>
+                            <input type="text" id="dispname" placeholder="What you want others to call you:" name="dispname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pronoun">Preferred pronouns:</label>
+                            <input type="text" id="pronoun" name="pronoun" placeholder="e.g. they/them" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="aboutmeinf">About me:</label>
+                            <textarea name="aboutmeinf" id="aboutmeinf" placeholder="Please write a short description about yourself:" rows="3"></textarea>
+                        </div>
+                                            
+                        <div>
+                            <button class="btn btn-primary" id="abtmebut" onclick="abtMe()">Submit your about me info</button>
+                        </div></div>
+                        
+                        
                     </div>
 
                     <div class="submit-song-form">
@@ -116,10 +115,14 @@
                         </div>
                        </form>
                     </div>
-                    <div class="uploaded-songs" id="uploaded_songs">
+                    <div class="uploaded-songs">
+                        <h2>Your uploaded songs:</h2>
+                        <div class="" id="uploaded_songs">
                             
     
+                        </div>
                     </div>
+                    
                     
                     
                 </div> <!--closes main div -->  
@@ -205,6 +208,7 @@
         <script src="js/site_interactions.js"></script>
         <script src="js/player.js"></script>
         <script src="js/infscrol.js"></script>
+        <script src="js/aboutmeinf.js"></script>
         <script src="js/submitsong.js"></script>
     </body>
 </html>

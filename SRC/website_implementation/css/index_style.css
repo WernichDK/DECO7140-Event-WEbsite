@@ -34,7 +34,7 @@
     height: 10vw;
     
 }
-.player, .music-feed, .recommended-feed, .login-form {
+.player, .music-feed, .recommended-feed, .login-form, .aboutme, .likeson, .discover_songs, .discoverartists {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -181,3 +181,7 @@ i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
     display: block;
 }
 
+#registration-confirm {
+    align-self: flex-start;
+    justify-self: normal;
+}

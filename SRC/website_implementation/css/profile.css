@@ -44,7 +44,7 @@
     color: var(--sal);
 
 }
-.submit-song-form, .login-form{
+.submit-song-form, .login-form, .aboutme {
     display: flex;
     flex-direction: row;
     padding: 20px;
